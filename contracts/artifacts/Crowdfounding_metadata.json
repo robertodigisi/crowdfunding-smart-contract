@@ -1,0 +1,46 @@
+{
+	"compiler": {
+		"version": "0.8.17+commit.8df45f5f"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"title": "Crowdfounding",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/crowdfounding.sol": "Crowdfounding"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/crowdfounding.sol": {
+			"keccak256": "0x031786b676a6b5ffd48418545a816d99d2d65a6ad76d6885e7b6a6aed7e34152",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://2425bef499992bde63a277fa7ce8e0429181b4850f5c5063f091606b4a7d9e20",
+				"dweb:/ipfs/QmP1gv5ZGYvuaV445LL5JRstCZU8DeYKdgUaBdJAUBa53C"
+			]
+		}
+	},
+	"version": 1
+}
