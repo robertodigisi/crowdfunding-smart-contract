@@ -7,9 +7,8 @@ This is a project aimed at educating and familiarizing myself with the Solidity 
 The general idea is to allow anybody to create a campaign on the blockchain. Once a campaign goes live, people can donate up until a defined deadline.
 
 ## Implemented features
-* As a user I can see how many campaign have been created so that I'm informed about it;
-*
-
+* As a user I can see how many campaign have been created so that I have this information;
+* As a user I can see how much has been donated to campaigns so that I have this information;
 * As a user I can start a campaign, so that I can receive ETH.
 
 # Upcoming features
