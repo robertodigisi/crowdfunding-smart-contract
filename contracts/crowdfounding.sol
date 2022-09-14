@@ -3,17 +3,23 @@
 pragma solidity ^0.8.17;
 
 import "@openzeppelin/contracts/utils/Counters.sol";
+import "@openzeppelin/contracts/access/Ownable.sol";
 
-contract Crowdfounding {
+contract Crowdfounding is Ownable{
 
     using Counters for Counters.Counter;
 
     // Events to be emitted when specific actions are completed
     event CampaignCreated ( uint256 _campaignId, address _initiator ) ;
 
+    // Map of all the campaigns that have been started
+    mapping(uint256=>Campaign) public campaigns;
+
+    // Others
+    address private _owner;
     Counters.Counter public totalCampaigns;
     uint256 public totalDonations;
-
+   
     // Campaign details
     struct Campaign {
         uint256 id;
@@ -25,8 +31,14 @@ contract Crowdfounding {
         uint256 balance;
     }
 
-    // Map of all the campaigns that have been started
-    mapping(uint256=>Campaign) public campaigns;
+    
+    constructor () {
+        _owner = msg.sender; 
+    }
+
+    function renounceOwnership() public view override onlyOwner {
+       revert ("Can't renounce ownership here");
+    }
 
     // create a new campaign
     function createCampaign ( string calldata _title, string calldata _description, uint256 _deadline ) public {
